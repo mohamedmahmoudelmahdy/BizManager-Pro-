@@ -1,0 +1,19 @@
+[Unit]
+Description=Celery worker for BizManager Pro
+After=network.target redis.service
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/path/to/app/backend
+EnvironmentFile=/path/to/app/backend/.env
+ExecStart=/path/to/app/.venv/bin/celery -A config.celery worker -l info -Q bizmanager.default,bizmanager.einvoicing --concurrency=2
+Restart=always
+RestartSec=5
+
+# Hardening
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

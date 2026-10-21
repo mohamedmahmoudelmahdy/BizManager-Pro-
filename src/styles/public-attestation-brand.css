@@ -1,0 +1,128 @@
+/**
+ * Al-Khatm Al-Awwal (الختم الأول للطباعة) brand tokens for the public attestation form.
+ * Scoped via `.public-attestation-brand` so internal BizManager chrome is unchanged.
+ */
+
+.public-attestation-brand {
+  --brand-navy: #003875;
+  --brand-navy-deep: #00244d;
+  --brand-orange: #f39200;
+  --brand-orange-hover: #d97f00;
+  --brand-ink: #0f172a;
+  --brand-muted: #64748b;
+  --brand-surface: #f5f7fa;
+  --brand-card: #ffffff;
+  --brand-ring: color-mix(in srgb, var(--brand-orange) 45%, transparent);
+
+  background-color: var(--brand-surface);
+  color: var(--brand-ink);
+  min-height: 100dvh;
+}
+
+.public-attestation-brand .brand-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid color-mix(in srgb, var(--brand-navy) 12%, #e2e8f0);
+}
+
+.public-attestation-brand .brand-lang-btn {
+  color: var(--brand-navy);
+  border: 1px solid color-mix(in srgb, var(--brand-navy) 25%, #cbd5e1);
+  background: #ffffff;
+}
+
+.public-attestation-brand .brand-lang-btn:hover {
+  background: color-mix(in srgb, var(--brand-orange) 12%, #ffffff);
+  border-color: var(--brand-orange);
+  color: var(--brand-navy);
+}
+
+.public-attestation-brand .brand-h1 {
+  color: var(--brand-navy);
+}
+
+.public-attestation-brand .brand-section-title {
+  color: var(--brand-navy);
+}
+
+.public-attestation-brand .brand-card {
+  border-color: color-mix(in srgb, var(--brand-navy) 12%, #e2e8f0);
+  box-shadow: 0 1px 2px rgba(0, 56, 117, 0.04);
+}
+
+.public-attestation-brand .brand-degree-card {
+  border-color: color-mix(in srgb, var(--brand-navy) 14%, #e2e8f0);
+  border-inline-start: 3px solid var(--brand-orange);
+}
+
+.public-attestation-brand .brand-input:focus {
+  outline: none;
+  border-color: var(--brand-orange);
+  box-shadow: 0 0 0 3px var(--brand-ring);
+}
+
+.public-attestation-brand .brand-btn-primary {
+  background-color: var(--brand-orange) !important;
+  color: #ffffff !important;
+  border-color: var(--brand-orange) !important;
+}
+
+.public-attestation-brand .brand-btn-primary:hover:not(:disabled) {
+  background-color: var(--brand-orange-hover) !important;
+  border-color: var(--brand-orange-hover) !important;
+}
+
+.public-attestation-brand .brand-btn-primary:focus-visible {
+  box-shadow: 0 0 0 3px var(--brand-ring);
+}
+
+.public-attestation-brand .brand-btn-secondary {
+  border-color: color-mix(in srgb, var(--brand-navy) 28%, #cbd5e1) !important;
+  color: var(--brand-navy) !important;
+  background: #ffffff !important;
+}
+
+.public-attestation-brand .brand-btn-secondary:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--brand-navy) 6%, #ffffff) !important;
+}
+
+.public-attestation-brand .brand-footer {
+  border-top: 1px solid color-mix(in srgb, var(--brand-navy) 10%, #e2e8f0);
+  background: #ffffff;
+  color: var(--brand-muted);
+}
+
+.public-attestation-brand .brand-success-ref {
+  color: var(--brand-navy);
+}
+
+.public-attestation-brand .brand-accent-bar {
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--brand-navy) 0%,
+    var(--brand-orange) 55%,
+    var(--brand-navy-deep) 100%
+  );
+}
+
+.public-attestation-brand .brand-sticky-actions {
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
+  margin-inline: -1rem;
+  padding: 0.75rem 1rem;
+  background: color-mix(in srgb, var(--brand-surface) 92%, #ffffff);
+  border-top: 1px solid color-mix(in srgb, var(--brand-navy) 10%, #e2e8f0);
+  backdrop-filter: blur(6px);
+}
+
+@media (min-width: 640px) {
+  .public-attestation-brand .brand-sticky-actions {
+    margin-inline: 0;
+    padding-inline: 0;
+    background: transparent;
+    border-top: 0;
+    backdrop-filter: none;
+    position: static;
+  }
+}

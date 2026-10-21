@@ -1,0 +1,85 @@
+# Dependencies & virtualenvs
+node_modules/
+.venv/
+venv/
+env/
+backend/.venv/
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.turbo/
+.vite/
+
+# Environment & secrets (never commit real credentials)
+.env
+.env.local
+.env.*.local
+backend/.env
+backend/.redis_local_password.txt
+**/.redis_local_password.txt
+@cred.txt
+cred.txt
+*.pem
+*.key
+*.p12
+*.pfx
+# Keep placeholder env templates
+!.env.example
+!backend/.env.example
+
+# Local databases & dumps
+*.sqlite3
+*.sqlite3-*
+*.db
+*.dump
+*.sql.gz
+backend/db.sqlite3
+backend/fresh_test.sqlite3
+backend/media/
+backend/private_media/
+backend/staticfiles/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+**/*.pyc
+backend/*/migrations/__pycache__/
+
+# Logs & temp
+*.log
+debug-*.log
+**/debug-*.log
+debug-phase*.txt
+*.tmp
+*.temp
+.tmp/
+tmp/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.cursor/
+*.swp
+
+# Local data / backups / private exports (not source)
+Companies_expire.xlsx
+1 FS GEN-*/
+**/backups/
+*.bak
+
+# Agent / runtime debug NDJSON logs
+debug-*.log
+**/debug-*.log
+
+# Django migrations ARE version-controlled.
+# Do NOT ignore migration files or their package __init__.py.
